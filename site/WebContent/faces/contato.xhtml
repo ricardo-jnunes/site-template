@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+	<f:view>
+		<ui:composition template="/templates/default/default.xhtml">
+			<ui:define name="content">
+				<div class="container content-top">
+					<h:form id="contatoForm" class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="inputNome">Nome:</label>
+							<div class="controls">
+								<input type="text" id="inputNome" placeholder="Nome"></input>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">E-mail:</label>
+							<div class="controls">
+								<input type="text" id="inputEmail" placeholder="E-mail"></input>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputMsg">Mensagem:</label>
+							<div class="controls">
+								<textarea id="inputMsg" placeholder="Mensagem" rows="3" style="max-height: 100px; max-width: 250px;"></textarea>
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<button type="submit" class="btn">Enviar</button>
+								<button type="button" class="btn">Cancelar</button>
+							</div>
+						</div>
+					</h:form>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</f:view>
+</h:body>
+</html>

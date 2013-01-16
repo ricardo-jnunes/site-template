@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13572255467740" configfile="/site/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf135730726620739" outlinks="pf135730726620740 pf13582574271802 pf13582574271803 pf13582721127991" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/login/login.xhtml" id="pf135730726620741" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf135730726620740" path="/faces/login/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/sobre.xhtml" id="pf13582569969131" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf13582574271802" path="/faces/sobre.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf13582574271804" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13582574271803" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="faces/contato.xhtml" id="pf13582721127992" referenceLink="//@navigationRule.1/@navigationCase.2/@toViewId|" inlinks="pf13582721127991" path="/faces/contato.xhtml"/>
+  <links id="pf135730726620740" target="pf135730726620741" source="pf135730726620739" outcome="login" redirect="true"/>
+  <links id="pf13582574271802" target="pf13582569969131" source="pf135730726620739" outcome="sobre" redirect="true"/>
+  <links id="pf13582574271803" target="pf13582574271804" source="pf135730726620739" outcome="home" redirect="true"/>
+  <links id="pf13582721127991" target="pf13582721127992" source="pf135730726620739" outcome="contato" redirect="true"/>
+</pageflow:Pageflow>

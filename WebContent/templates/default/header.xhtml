@@ -12,6 +12,7 @@
 </h:head>
 <h:body>
 	<ui:composition>
+		<f:loadBundle basename="resources.application" var="application_props" />
 		<div class="container navbar-wrapper">
 			<div class="navbar navbar-inverse">
 				<div class="navbar-inner">
@@ -20,11 +21,11 @@
 						class="btn btn-navbar"> <span class="icon-bar"></span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span>
 					</a>
-					<a href="#" class="brand">Project name</a>
+					<a href="#" class="brand">#{application_props.tituloSite}</a>
 					<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 					<div class="nav-collapse collapse">
 						<p class="navbar-text pull-right" style="margin-top: 5px;">
-            		  		Logged in as <h:link styleClass="navbar-link" outcome="login" value="User"></h:link>
+            		  		#{application_props.looged_as} <h:link styleClass="navbar-link" outcome="login" value="User"></h:link>
        			     	</p>
 						<ul class="nav">
 							<li><h:link id="home-menu" outcome="home" value="Home"></h:link></li>

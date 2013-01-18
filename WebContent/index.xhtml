@@ -11,6 +11,7 @@
 	<f:view>
 		<ui:composition template="/templates/default/default.xhtml">
 			<ui:define name="content">
+				<f:loadBundle basename="resources.home" var="home_props" />
 				<div id="home">
 					<div class="carousel slide" id="myCarousel">
 						<div class="carousel-inner">
@@ -40,6 +41,13 @@
 							class="right carousel-control">›</a>
 					</div>
 					<div class="container">
+						<div class="hero-unit">
+				        	<h1>#{home_props['home.title.hero']}</h1>
+				        	<p>#{home_props['home.description.hero']}</p>
+				        	<p>
+				        		<h:link outcome="home" styleClass="btn btn-primary btn-large" value="#{home_props['home.link.hero']}"></h:link>
+				        	</p>
+				    	</div>
 						<div class="row">
 							<div class="span4">
 								<h2>Heading</h2>

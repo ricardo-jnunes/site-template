@@ -18,9 +18,9 @@ public class HomeController {
 		populateBanners(banners, 3);
 	}
 	
-	private void populateBanners(List<HomeForm> list, int size){
+	private void populateBanners(List<HomeForm> banners, int size){
 		for(int i =0; i< size;i++){
-			list.add(new HomeForm("Titulo " + i ,"Descricao " + i ,"Link " + i ));
+			banners.add(new HomeForm("Titulo " + i ,"Descricao " + i ,"Link " + i ));
 		}
 	}
 
@@ -31,6 +31,4 @@ public class HomeController {
 	public void setBanners(List<HomeForm> banners) {
 		this.banners = banners;
 	}
-
-	
 }

@@ -28,6 +28,4 @@ public class HomeForm {
 	public void setLink(String linkBanner) {
 		this.linkBanner = linkBanner;
 	}
-	
-	
 }

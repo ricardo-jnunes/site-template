@@ -10,30 +10,31 @@
 	<f:view>
 		<ui:composition template="/templates/default/default.xhtml">
 			<ui:define name="content">
+				<f:loadBundle basename="resources.contato" var="contato_props" />
 				<div id="contato" class="container content-top">
 					<h:form id="contatoForm" class="form-horizontal">
 						<div class="control-group">
-							<label class="control-label" for="inputNome">Nome:</label>
+							<label class="control-label" for="inputNome">#{contato_props.nome}</label>
 							<div class="controls">
 								<input type="text" id="inputNome" placeholder="Nome"></input>
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="inputEmail">E-mail:</label>
+							<label class="control-label" for="inputEmail">#{contato_props.email}</label>
 							<div class="controls">
 								<input type="text" id="inputEmail" placeholder="E-mail"></input>
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="inputMsg">Mensagem:</label>
+							<label class="control-label" for="inputMsg">#{contato_props.mensagem}</label>
 							<div class="controls">
 								<textarea id="inputMsg" placeholder="Mensagem" rows="3" style="max-height: 100px; max-width: 250px;"></textarea>
 							</div>
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<button type="submit" class="btn">Enviar</button>
-								<button type="button" class="btn">Cancelar</button>
+								<button type="submit" class="btn">#{contato_props['botao.enviar']}</button>
+								<button type="button" class="btn">#{contato_props['botao.cancelar']}</button>
 							</div>
 						</div>
 					</h:form>

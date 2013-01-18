@@ -6,6 +6,8 @@
 	version="2.0">
 	<application>
 		<message-bundle>resources.application</message-bundle>
+		<message-bundle>resources.home</message-bundle>
+		<message-bundle>resources.contato</message-bundle>
 		<message-bundle>resources.footer</message-bundle>
 
 		<locale-config>

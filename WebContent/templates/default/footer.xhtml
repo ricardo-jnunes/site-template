@@ -10,35 +10,29 @@
 <h:body>
 	<ui:composition>
 		<!-- Footer -->
-		<f:loadBundle basename="resources.footer" var="msgFooter" />
+		<f:loadBundle basename="resources.footer" var="footer_props" />
 		<div class="container">
 			<div class="footer-border"></div>
 			<div class="row">
 				<div class="span4">
-					<h2>Footer</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce
-						dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-						ut fermentum massa justo sit amet risus.</p>
+					<h2>#{footer_props['footer.title.header.left']}</h2>
+					<p>#{footer_props['footer.description.left']}</p>
 					<p>
-						<a href="#" class="">View details</a>
+						<h:link outcome="home" value="#{footer_props['footer.description.link.left']}"></h:link>
 					</p>
 				</div>
 				<div class="span4">
-					<h2>Footer</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce
-						dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-						ut fermentum massa justo sit amet risus.</p>
+					<h2>#{footer_props['footer.title.header.central']}</h2>
+					<p>#{footer_props['footer.description.central']}</p>
 					<p>
-						<a href="#" class="">View details</a>
+						<h:link outcome="home" value="#{footer_props['footer.description.link.central']}"></h:link>
 					</p>
 				</div>
 				<div class="span4">
-					<h2>Footer</h2>
-					<p>Donec id elit non mi porta gravida at eget metus. Fusce
-						dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-						ut fermentum massa justo sit amet risus.</p>
+					<h2>#{footer_props['footer.title.header.right']}</h2>
+					<p>#{footer_props['footer.description.right']}</p>
 					<p>
-						<a href="#" class="">View details</a>
+						<h:link outcome="home" value="#{footer_props['footer.description.link.right']}"></h:link>
 					</p>
 				</div>
 			</div>

@@ -13,7 +13,7 @@ public class ContatoController {
 
 	public void enviarMensagem(){
 		
-		String msg = "Contato-- Nome: " + form.getNome() + 
+		String msg = "Mensagem de contato recebida. Nome: " + form.getNome() + 
 				" E-mail: " + form.getEmail() + " Mensagem: " + form.getMensagem();
 		
 		MessagesController.addInfo(null, msg, null);
@@ -28,5 +28,4 @@ public class ContatoController {
 		this.form = form;
 	}
 
-	
 }

@@ -12,13 +12,15 @@
 			<ui:define name="content">
 				<div class="container content-top">
 					<h:form id="signin" class="form-signin">
-						<h:messages errorClass="alert-error"></h:messages>
 						<h3 class="form-signin-heading">Login</h3>
+						<h:messages errorClass="alert-error"></h:messages>
 						<h:inputText id="nome" class="input-block-level" value="#{login.nome}" required="true" requiredMessage="O nome deve ser preenchido."></h:inputText>
 						<h:inputText id="passwd" class="input-block-level" value="#{login.senha}" required="true" requiredMessage="A senha deve ser preenchido."></h:inputText>
 						<br class="clearBoth"/>
-						<h:commandButton class="btn btn-primary space-button" type="submit" value="Entrar"
-						 action="#{login.realizarLogin}" ></h:commandButton>
+						<div class="space-button">
+							<h:commandButton class="btn btn-primary" type="submit" value="Entrar"
+							 action="#{login.realizarLogin}" ></h:commandButton>
+						 </div>
 					</h:form>
 				</div>
 				

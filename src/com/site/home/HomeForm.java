@@ -1,4 +1,4 @@
-package com.site;
+package com.site.home;
 
 public class HomeForm {
 	String tituloBanner;

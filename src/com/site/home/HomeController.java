@@ -1,4 +1,4 @@
-package com.site;
+package com.site.home;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-### Bem vindo, este é um template em JSF e Boostrap.
-
 Repository site-template
 =============
+
+### Bem vindo, este é um template em JSF e Boostrap.
 
 Um template para sites em JSF e Bootstrap.
 
@@ -9,11 +9,7 @@ Design prático e de fácil entendimento, desenvolvido para ser um site de marketi
 Pode ser usado como um ponto de início para criar um site criativo, único e responsivo.
 
 
-
 ### Welcome, this is a template for JSF and Bootstrap.
-
-Repository site-template
-=============
 
 A template for sites in JSF and Bootstrap.
 

@@ -11,33 +11,42 @@
 		<ui:composition template="/templates/default/default.xhtml">
 			<ui:define name="content">
 				<f:loadBundle basename="resources.contato" var="contato_props" />
-				<div id="contato" class="container content-top">
-					<h:form id="contatoForm" class="form-horizontal">
-						<div class="control-group">
-							<label class="control-label" for="inputNome">#{contato_props.nome}</label>
-							<div class="controls">
-								<input type="text" id="inputNome" placeholder="Nome"></input>
-							</div>
+				<div class="container">
+					<div id="contato" class="row-fluid content-top">
+						<div class="span7">
+							<h:form id="contatoForm" class="form-horizontal">
+								<div class="control-group">
+									<label class="control-label" for="inputNome">#{contato_props.nome}</label>
+									<div class="controls">
+										<input type="text" id="inputNome" placeholder="Nome" class="span10"></input>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputEmail">#{contato_props.email}</label>
+									<div class="controls">
+										<input type="text" id="inputEmail" placeholder="E-mail"  class="span10"></input>
+									</div>
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="inputMsg">#{contato_props.mensagem}</label>
+									<div class="controls">
+										<textarea id="inputMsg" placeholder="Mensagem" rows="3" class="span10"></textarea>
+									</div>
+								</div>
+								<div class="control-group">
+									<div class="controls">
+										<button type="submit" class="btn">#{contato_props['botao.enviar']}</button>
+										<button type="button" class="btn">#{contato_props['botao.cancelar']}</button>
+									</div>
+								</div>
+							</h:form>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputEmail">#{contato_props.email}</label>
-							<div class="controls">
-								<input type="text" id="inputEmail" placeholder="E-mail"></input>
-							</div>
+						<div class="span5">
+							<a href="#" class="thumbnail"> <img alt=""
+								src="#{facesContext.externalContext.requestContextPath}/framework/img/default.png"></img>
+							</a>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="inputMsg">#{contato_props.mensagem}</label>
-							<div class="controls">
-								<textarea id="inputMsg" placeholder="Mensagem" rows="3" style="max-height: 100px; max-width: 250px;"></textarea>
-							</div>
-						</div>
-						<div class="control-group">
-							<div class="controls">
-								<button type="submit" class="btn">#{contato_props['botao.enviar']}</button>
-								<button type="button" class="btn">#{contato_props['botao.cancelar']}</button>
-							</div>
-						</div>
-					</h:form>
+					</div>
 				</div>
 			</ui:define>
 		</ui:composition>

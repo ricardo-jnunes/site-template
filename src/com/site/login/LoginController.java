@@ -3,6 +3,8 @@ package com.site.login;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
+import com.site.utils.MessagesController;
+
 @ManagedBean(name="login")
 @RequestScoped
 public class LoginController {
@@ -14,8 +16,8 @@ public class LoginController {
 		if(this.nome.equals("admin") && this.senha.equals("admin")){
 			return "home";
 		}
-		
-		return "login";
+		MessagesController.addWarn(null, "O nome/senha não conferem.", null);
+		return null;
 	}
 
 	public String getNome() {

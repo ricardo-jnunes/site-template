@@ -5,35 +5,27 @@ import javax.faces.bean.RequestScoped;
 
 import com.site.utils.MessagesController;
 
-@ManagedBean(name="login")
+@ManagedBean(name="loginController")
 @RequestScoped
 public class LoginController {
 
-	String nome;
-	String senha;
-	
+	private LoginForm login = new LoginForm();
+		
+	public LoginForm getLogin() {
+		return login;
+	}
+
+	public void setLogin(LoginForm login) {
+		this.login = login;
+	}
+
+
 	public String realizarLogin(){
-		if(this.nome.equals("admin") && this.senha.equals("admin")){
+		if(login.getNome().equals("admin") && login.getSenha().equals("admin")){
 			return "home";
 		}
 		MessagesController.addWarn(null, "O nome/senha não conferem.", null);
 		return null;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-	
 }

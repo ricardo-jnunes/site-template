@@ -46,4 +46,15 @@
 	</navigation-rule>
 	<!-- Fim - Menu -->
 
+	<!-- Cadastro -->
+	<navigation-rule>
+		<from-view-id>/faces/login/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>novoCadastro</from-outcome>
+			<to-view-id>/faces/usuarios/cadastro.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<!-- Fim - Cadastro -->
+
 </faces-config>

@@ -56,5 +56,19 @@
 		</navigation-case>
 	</navigation-rule>
 	<!-- Fim - Cadastro -->
+	<!-- Protected Area -->
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>inicialProtected</from-outcome>
+			<to-view-id>/faces/protected/inicial.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>usuariosProtected</from-outcome>
+			<to-view-id>/faces/protected/usuarios.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<!-- Fim - Protected Area -->
 
 </faces-config>

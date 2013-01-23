@@ -22,7 +22,7 @@ public class LoginController {
 
 	public String realizarLogin(){
 		if(login.getNome().equals("admin") && login.getSenha().equals("admin")){
-			return "home";
+			return "inicialProtected";
 		}
 		MessagesController.addWarn(null, "O nome/senha não conferem.", null);
 		return null;

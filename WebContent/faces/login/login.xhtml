@@ -11,7 +11,7 @@
 		<ui:composition template="/templates/default/default_login.xhtml">
 			<ui:define name="content">
 				<div class="container content-top">
-					<h:form id="signin" class="form-signin">
+					<h:form id="signin" styleClass="form-signin">
 						<h3 class="form-signin-heading">Login</h3>
 						<h:messages warnClass="alert" errorClass="alert-error"></h:messages>
 						<h:inputText id="nome" class="input-block-level" value="#{loginController.login.nome}" required="true" requiredMessage="O nome deve ser preenchido."></h:inputText>
@@ -22,6 +22,9 @@
 							 action="#{loginController.realizarLogin}" ></h:commandButton>
 						 </div>
 					</h:form>
+					<br class="clearBoth"/>
+					<hr/>
+					<h:link styleClass="btn" outcome="novoCadastro" value="Cadastro"></h:link>
 				</div>
 			</ui:define>
 		</ui:composition>

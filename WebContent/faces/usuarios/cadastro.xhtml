@@ -46,13 +46,14 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<h:outputLabel styleClass="control-label" for="roleID" value="Grupo:"></h:outputLabel>
+							<h:outputLabel styleClass="control-label" for="selectRoleID" value="Grupo:"></h:outputLabel>
 							<div class="controls">
-							<h:selectOneMenu value="#{usuarioController.formUser.role}">
-								<f:selectItem itemLabel="Selecione..." itemValue="0"></f:selectItem>
-								<f:selectItem itemLabel="Administrador" itemValue="ADMIN"></f:selectItem>
-								<f:selectItem itemLabel="Usuário" itemValue="USER"></f:selectItem>
-							</h:selectOneMenu>
+								<h:selectOneMenu id="selectRoleID" value="#{usuarioController.formUser.role}" required="true" requiredMessage="Por favor, selecione um grupo.">
+									<f:selectItem itemLabel="Selecione..." itemValue="#{null}"></f:selectItem>
+									<f:selectItem itemLabel="Administrador" itemValue="ADMIN"></f:selectItem>
+									<f:selectItem itemLabel="Usuário" itemValue="USER"></f:selectItem>
+								</h:selectOneMenu>
+								&nbsp;<h:message for="selectRoleID" errorClass="alert-error"></h:message>
 							</div>
 						</div>
 						<div class="control-group">
